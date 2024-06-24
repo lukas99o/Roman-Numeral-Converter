@@ -61,9 +61,8 @@ button:hover {
 
 .pTag-output {
     margin-top: 25px;
-    font-size: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
+    font-size: 25px;
+    padding: 10px;
     background-color: white;
     border: black solid 2px;
 }
