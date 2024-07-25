@@ -58,3 +58,27 @@ convertBtn.addEventListener("click", () => {
         output.classList.remove("hidden");
     }
 });
+
+input.addEventListener("keydown", e => {
+    if (e.key === "Enter") {
+        output.replaceChildren();
+
+        if (input.value === "") {
+            pTag.innerHTML = "Please enter a valid number";
+            output.appendChild(pTag);
+            output.classList.remove('hidden');
+        } else if (input.value < 1) {
+            pTag.innerHTML = "Please enter a number greater than or equal to 1";
+            output.appendChild(pTag);
+            output.classList.remove('hidden');
+        } else if (input.value >= 4000) {
+            pTag.innerHTML = "Please enter a number less than or equal to 3999";
+            output.appendChild(pTag);
+            output.classList.remove('hidden');
+        } else {
+            pTag.innerHTML = RomanNumeralConverter(input.value);
+            output.appendChild(pTag);
+            output.classList.remove("hidden");
+        }
+    }
+})
